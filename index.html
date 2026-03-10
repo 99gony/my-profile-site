@@ -19,7 +19,7 @@
       --accent2: #5eead4;
       --accent3: #f472b6;
       --text: #e2e8f0;
-      --muted: #64748b;
+      --muted: #94a3b8;
       --card-hover: rgba(124,106,247,0.06);
     }
 
@@ -571,8 +571,13 @@
       .nav-links a { font-size: 0.82rem; }
       .container { padding: 0 1.3rem; }
       .about-grid { grid-template-columns: 1fr; gap: 3rem; }
-      .skills-grid, .projects-grid { grid-template-columns: 1fr; }
+      .skills-grid { grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+      .projects-grid { grid-template-columns: 1fr; }
       .stats-grid { grid-template-columns: 1fr 1fr; }
+      .skill-card { padding: 1.2rem; }
+      .skill-desc { display: none; }
+      .skill-name { font-size: 0.9rem; }
+      .skill-icon { font-size: 1.6rem; margin-bottom: 0.6rem; }
     }
 
     @media (max-width: 480px) {

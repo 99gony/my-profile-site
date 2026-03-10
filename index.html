@@ -6,7 +6,7 @@
   <title>주건휘 | 풀스택 개발자</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Noto+Sans+JP:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -31,6 +31,10 @@
       font-family: 'Noto Sans KR', sans-serif;
       line-height: 1.6;
       overflow-x: hidden;
+    }
+
+    body.lang-ja {
+      font-family: 'Noto Sans JP', sans-serif;
     }
 
     /* ── 배경 그라디언트 ── */
@@ -602,7 +606,7 @@
 
   <!-- Nav -->
   <nav>
-<ul class="nav-links">
+    <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
@@ -614,22 +618,22 @@
   <section id="hero">
     <div class="container">
       <div class="hero-inner">
-        <p class="hero-greeting">안녕하세요.</p>
+        <p class="hero-greeting" data-i18n="hero-greeting">안녕하세요.</p>
 
         <h1 class="hero-name-line">
-          <span class="static">풀스택 개발자&nbsp;</span><br />
+          <span class="static" data-i18n="hero-static">풀스택 개발자&nbsp;</span><br />
           <span class="hero-name-typed" id="typed-name"></span><span class="cursor" id="cursor"></span>
         </h1>
 
-        <p class="hero-desc">
+        <p class="hero-desc" data-i18n-html="hero-desc">
           게임에서 앱, 백엔드, 클라우드까지 — 아이디어를 현실로 만드는
           <strong>풀스택 개발자</strong>입니다. Unity부터 Flutter, NestJS, AWS까지
           스택의 경계 없이 제품을 완성합니다.
         </p>
 
         <div class="hero-cta">
-          <a href="#projects" class="btn btn-primary">프로젝트 보기 →</a>
-          <a href="#contact" class="btn btn-outline">연락하기</a>
+          <a href="#projects" class="btn btn-primary" data-i18n="btn-projects">프로젝트 보기 →</a>
+          <a href="#contact" class="btn btn-outline" data-i18n="btn-contact">연락하기</a>
         </div>
 
         <div class="hero-stack">
@@ -656,14 +660,14 @@
       <div class="about-grid">
         <div class="about-text fade-up">
           <span class="section-label">// about me</span>
-          <h2 class="section-title">경계 없는<br />풀스택 개발자</h2>
-          <p>
+          <h2 class="section-title" data-i18n-html="about-title">경계 없는<br />풀스택 개발자</h2>
+          <p data-i18n-html="about-p1">
             게임 개발(<strong>Unity</strong>)부터 모바일 앱(<strong>Flutter</strong>),
             견고한 백엔드(<strong>NestJS</strong>), 데이터베이스(<strong>RDS / MongoDB</strong>),
             그리고 클라우드 인프라(<strong>AWS</strong>)까지 — 제품의 처음부터 끝을
             혼자서도 완성할 수 있습니다.
           </p>
-          <p>
+          <p data-i18n-html="about-p2">
             단순히 기능을 구현하는 것을 넘어, <strong>사용자 경험</strong>과
             <strong>시스템 안정성</strong> 모두를 고려하며 개발합니다.
             새로운 기술을 빠르게 익히고, 팀과 함께 더 나은 제품을 만드는 것을 즐깁니다.
@@ -673,11 +677,11 @@
         <div class="stats-grid fade-up" style="transition-delay: 0.15s">
           <div class="stat-card">
             <div class="stat-number">6+</div>
-            <div class="stat-label">기술 스택</div>
+            <div class="stat-label" data-i18n="stat-tech">기술 스택</div>
           </div>
           <div class="stat-card">
             <div class="stat-number">3+</div>
-            <div class="stat-label">플랫폼 경험</div>
+            <div class="stat-label" data-i18n="stat-platform">플랫폼 경험</div>
           </div>
           <div class="stat-card">
             <div class="stat-number">Full</div>
@@ -685,7 +689,7 @@
           </div>
           <div class="stat-card">
             <div class="stat-number">∞</div>
-            <div class="stat-label">학습 의지</div>
+            <div class="stat-label" data-i18n="stat-learning">학습 의지</div>
           </div>
         </div>
       </div>
@@ -697,14 +701,14 @@
     <div class="container">
       <div class="skills-header fade-up">
         <span class="section-label">// tech stack</span>
-        <h2 class="section-title">다루는 기술들</h2>
+        <h2 class="section-title" data-i18n="skills-title">다루는 기술들</h2>
       </div>
 
       <div class="skills-grid">
         <div class="skill-card fade-up" style="transition-delay:0.05s">
           <div class="skill-icon">🎮</div>
           <div class="skill-name">Unity</div>
-          <div class="skill-desc">C#을 기반으로 2D/3D 게임 및 인터랙티브 콘텐츠를 개발합니다. 물리 엔진, 쉐이더, 최적화까지 다룹니다.</div>
+          <div class="skill-desc" data-i18n="skill-desc-unity">C#을 기반으로 2D/3D 게임 및 인터랙티브 콘텐츠를 개발합니다. 물리 엔진, 쉐이더, 최적화까지 다룹니다.</div>
           <div class="skill-tags">
             <span class="skill-tag">C#</span>
             <span class="skill-tag">Physics</span>
@@ -716,7 +720,7 @@
         <div class="skill-card fade-up" style="transition-delay:0.10s">
           <div class="skill-icon">📱</div>
           <div class="skill-name">Flutter</div>
-          <div class="skill-desc">Dart 언어로 iOS/Android 크로스플랫폼 앱을 개발합니다. 상태관리, 네이티브 연동, 배포까지 경험했습니다.</div>
+          <div class="skill-desc" data-i18n="skill-desc-flutter">Dart 언어로 iOS/Android 크로스플랫폼 앱을 개발합니다. 상태관리, 네이티브 연동, 배포까지 경험했습니다.</div>
           <div class="skill-tags">
             <span class="skill-tag">Dart</span>
             <span class="skill-tag">Riverpod</span>
@@ -727,7 +731,7 @@
         <div class="skill-card fade-up" style="transition-delay:0.15s">
           <div class="skill-icon">⚡</div>
           <div class="skill-name">NestJS</div>
-          <div class="skill-desc">TypeScript 기반 NestJS로 확장성 있는 RESTful API 및 WebSocket 서버를 설계·구현합니다.</div>
+          <div class="skill-desc" data-i18n="skill-desc-nestjs">TypeScript 기반 NestJS로 확장성 있는 RESTful API 및 WebSocket 서버를 설계·구현합니다.</div>
           <div class="skill-tags">
             <span class="skill-tag">TypeScript</span>
             <span class="skill-tag">REST API</span>
@@ -739,7 +743,7 @@
         <div class="skill-card fade-up" style="transition-delay:0.20s">
           <div class="skill-icon">🗄️</div>
           <div class="skill-name">RDS (MySQL / PostgreSQL)</div>
-          <div class="skill-desc">AWS RDS에서 관계형 데이터베이스를 운영합니다. 스키마 설계, 쿼리 최적화, 인덱싱을 다룹니다.</div>
+          <div class="skill-desc" data-i18n="skill-desc-rds">AWS RDS에서 관계형 데이터베이스를 운영합니다. 스키마 설계, 쿼리 최적화, 인덱싱을 다룹니다.</div>
           <div class="skill-tags">
             <span class="skill-tag">MySQL</span>
             <span class="skill-tag">PostgreSQL</span>
@@ -751,7 +755,7 @@
         <div class="skill-card fade-up" style="transition-delay:0.25s">
           <div class="skill-icon">🍃</div>
           <div class="skill-name">MongoDB</div>
-          <div class="skill-desc">문서 기반 NoSQL로 유연한 데이터 구조를 설계합니다. Mongoose, Aggregation Pipeline을 활용합니다.</div>
+          <div class="skill-desc" data-i18n="skill-desc-mongo">문서 기반 NoSQL로 유연한 데이터 구조를 설계합니다. Mongoose, Aggregation Pipeline을 활용합니다.</div>
           <div class="skill-tags">
             <span class="skill-tag">Mongoose</span>
           </div>
@@ -760,7 +764,7 @@
         <div class="skill-card fade-up" style="transition-delay:0.30s">
           <div class="skill-icon">🌐</div>
           <div class="skill-name">Next.js</div>
-          <div class="skill-desc">React 기반 풀스택 웹 프레임워크로 SSR/SSG를 활용한 웹 서비스를 개발합니다. App Router, API Routes, 배포까지 다룹니다.</div>
+          <div class="skill-desc" data-i18n="skill-desc-nextjs">React 기반 풀스택 웹 프레임워크로 SSR/SSG를 활용한 웹 서비스를 개발합니다. App Router, API Routes, 배포까지 다룹니다.</div>
           <div class="skill-tags">
             <span class="skill-tag">TypeScript</span>
             <span class="skill-tag">App Router</span>
@@ -772,7 +776,7 @@
         <div class="skill-card fade-up" style="transition-delay:0.35s">
           <div class="skill-icon">☁️</div>
           <div class="skill-name">AWS</div>
-          <div class="skill-desc">EC2, S3, Lambda, RDS, CloudFront 등 AWS 서비스로 안정적인 클라우드 인프라를 구성하고 운영합니다.</div>
+          <div class="skill-desc" data-i18n="skill-desc-aws">EC2, S3, Lambda, RDS, CloudFront 등 AWS 서비스로 안정적인 클라우드 인프라를 구성하고 운영합니다.</div>
           <div class="skill-tags">
             <span class="skill-tag">EC2</span>
             <span class="skill-tag">S3</span>
@@ -789,14 +793,14 @@
     <div class="container">
       <div class="projects-header fade-up">
         <span class="section-label">// projects</span>
-        <h2 class="section-title">주요 프로젝트</h2>
+        <h2 class="section-title" data-i18n="projects-title">주요 프로젝트</h2>
       </div>
 
       <div class="projects-grid">
         <div class="project-card fade-up" style="transition-delay:0.05s">
           <div class="project-category">Mobile App · Social</div>
-          <div class="project-title">엠티 (MBTI 채팅 앱)</div>
-          <div class="project-desc">
+          <div class="project-title" data-i18n="project-title-mt">엠티 (MBTI 채팅 앱)</div>
+          <div class="project-desc" data-i18n-html="project-desc-mt">
             원하는 MBTI 유형의 상대와 채팅할 수 있는 소셜 앱. 유료 광고 없이 순수 바이럴만으로
             <strong>앱스토어 무료차트 2위</strong>까지 달성했습니다.
             당시 1위는 반강제로 설치해야 했던 코로나 앱이었습니다.<br /><br />
@@ -815,7 +819,7 @@
         <div class="project-card fade-up" style="transition-delay:0.10s">
           <div class="project-category">Game · Unity</div>
           <div class="project-title">Rooftop Citizen</div>
-          <div class="project-desc">
+          <div class="project-desc" data-i18n="project-desc-rooftop">
             Unity로 개발한 3D 오소그래픽 뷰 전략 좀비 디펜스 서바이벌 게임.
             지형지물과 다양한 플레이어 유닛을 전략적으로 배치해
             끊임없이 몰려오는 다양한 좀비들로부터 시민들을 지켜내는 타워 디펜스 장르입니다.
@@ -834,8 +838,8 @@
     <div class="container">
       <div class="contact-inner fade-up">
         <span class="section-label">// contact</span>
-        <h2 class="section-title">함께 만들어요</h2>
-        <p class="contact-desc">
+        <h2 class="section-title" data-i18n="contact-title">함께 만들어요</h2>
+        <p class="contact-desc" data-i18n-html="contact-desc">
           새로운 프로젝트, 협업 제안, 또는 가벼운 인사도 언제든 환영합니다.<br />
           언제든 편하게 연락해 주세요.
         </p>
@@ -851,24 +855,81 @@
 
   <footer>
     <div class="container">
-      <span style="color:var(--muted)">© 2026 주건휘. Crafted with care.</span>
+      <span style="color:var(--muted)" data-i18n="footer-text">© 2026 주건휘. Crafted with care.</span>
     </div>
   </footer>
 
   <script>
+    // ── 다국어 번역 데이터 ──
+    const translations = {
+      ja: {
+        'hero-greeting': 'こんにちは。',
+        'hero-static': 'フルスタックエンジニア\u00a0',
+        'typed-name': 'ヒュイヒュイです。',
+        'hero-desc': 'ゲームからアプリ、バックエンド、クラウドまで — アイデアを現実に変える<strong>フルスタックエンジニア</strong>です。UnityからFlutter、NestJS、AWSまで、技術の壁を越えてプロダクトを完成させます。',
+        'btn-projects': 'プロジェクトを見る →',
+        'btn-contact': 'お問い合わせ',
+        'about-title': '境界のない<br />フルスタックエンジニア',
+        'about-p1': 'ゲーム開発（<strong>Unity</strong>）からモバイルアプリ（<strong>Flutter</strong>）、堅牢なバックエンド（<strong>NestJS</strong>）、データベース（<strong>RDS / MongoDB</strong>）、そしてクラウドインフラ（<strong>AWS</strong>）まで — プロダクトの最初から最後まで一人でも完成させることができます。',
+        'about-p2': '単に機能を実装するだけでなく、<strong>ユーザー体験</strong>と<strong>システムの安定性</strong>の両方を考慮しながら開発します。新しい技術を素早く習得し、チームと共により良いプロダクトを作ることを楽しんでいます。',
+        'stat-tech': '技術スタック',
+        'stat-platform': 'プラットフォーム経験',
+        'stat-learning': '学習意欲',
+        'skills-title': '扱う技術',
+        'skill-desc-unity': 'C#をベースに2D/3Dゲームおよびインタラクティブコンテンツを開発します。物理エンジン、シェーダー、最適化まで対応します。',
+        'skill-desc-flutter': 'Dart言語でiOS/Androidクロスプラットフォームアプリを開発します。状態管理、ネイティブ連携、リリースまで経験があります。',
+        'skill-desc-nestjs': 'TypeScriptベースのNestJSで、拡張性のあるRESTful APIおよびWebSocketサーバーを設計・実装します。',
+        'skill-desc-rds': 'AWS RDSでリレーショナルデータベースを運用します。スキーマ設計、クエリ最適化、インデックス設計を行います。',
+        'skill-desc-mongo': 'ドキュメント型NoSQLで柔軟なデータ構造を設計します。Mongoose、Aggregation Pipelineを活用します。',
+        'skill-desc-nextjs': 'ReactベースのフルスタックWebフレームワークでSSR/SSGを活用したWebサービスを開発します。App Router、API Routes、デプロイまで対応します。',
+        'skill-desc-aws': 'EC2、S3、Lambda、RDS、CloudFrontなどAWSサービスで安定したクラウドインフラを構築・運用します。',
+        'projects-title': '主なプロジェクト',
+        'project-title-mt': 'MT（MBTIチャットアプリ）',
+        'project-desc-mt': '希望するMBTIタイプの相手とチャットできるソーシャルアプリ。有料広告なしの純粋なバイラルだけで<strong>App Store無料チャート2位</strong>を達成しました。当時1位は半強制的にインストールさせられるコロナアプリでした。<br /><br /><strong>2022 Forbes Korea選定</strong>「韓国人が愛したアプリ」コミュニケーション部門13位に選ばれ、現在は<strong>コミュニティアプリへの転換</strong>を準備中です。',
+        'project-desc-rooftop': 'Unityで開発した3Dオソグラフィックビューのストラテジーゾンビディフェンスサバイバルゲーム。地形や様々なプレイヤーユニットを戦略的に配置し、絶え間なく押し寄せる多様なゾンビから市民を守るタワーディフェンスジャンルです。',
+        'contact-title': '一緒に作りましょう',
+        'contact-desc': '新しいプロジェクト、コラボレーションのご提案、または気軽なご挨拶もいつでも歓迎します。<br />お気軽にご連絡ください。',
+        'footer-text': '© 2026 ヒュイヒュイ. Crafted with care.',
+      }
+    };
+
+    // ── 언어 감지 및 번역 적용 ──
+    const urlLang = new URLSearchParams(location.search).get('lang');
+    const userLang = urlLang || (navigator.language || navigator.userLanguage || '').toLowerCase();
+    const isJa = userLang.startsWith('ja');
+
+    let typedTarget = '주건휘입니다.';
+
+    if (isJa) {
+      const t = translations.ja;
+      document.documentElement.lang = 'ja';
+      document.title = 'ヒュイヒュイ | フルスタックエンジニア';
+      document.body.classList.add('lang-ja');
+      typedTarget = t['typed-name'];
+
+      // textContent 교체
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.dataset.i18n;
+        if (t[key] !== undefined) el.textContent = t[key];
+      });
+
+      // innerHTML 교체 (strong, br 등 포함)
+      document.querySelectorAll('[data-i18n-html]').forEach(el => {
+        const key = el.dataset.i18nHtml;
+        if (t[key] !== undefined) el.innerHTML = t[key];
+      });
+    }
+
     // ── 타이핑 효과 ──
-    const target = '주건휘입니다.';
     const el = document.getElementById('typed-name');
     const cursor = document.getElementById('cursor');
     let i = 0;
 
     function type() {
-      if (i <= target.length) {
-        el.textContent = target.slice(0, i);
+      if (i <= typedTarget.length) {
+        el.textContent = typedTarget.slice(0, i);
         i++;
         setTimeout(type, i === 1 ? 600 : 90 + Math.random() * 60);
-      } else {
-        // 타이핑 완료 후 커서 깜빡임 유지
       }
     }
 
